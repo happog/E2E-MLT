@@ -5,11 +5,13 @@ code base for:  https://arxiv.org/abs/1801.09919
 
 
 ```
-@article{buvsta2018e2e,
+@@inproceedings{buvsta2018e2e,
   title={E2E-MLT-an unconstrained end-to-end method for multi-language scene text},
   author={Bu{\v{s}}ta, Michal and Patel, Yash and Matas, Jiri},
-  journal={arXiv preprint arXiv:1801.09919},
-  year={2018}
+  booktitle={Asian Conference on Computer Vision},
+  pages={127--143},
+  year={2018},
+  organization={Springer}
 }
 ```
 
@@ -24,7 +26,7 @@ code base for:  https://arxiv.org/abs/1801.09919
 
 ## Pretrained Models
 
-  [e2e-mlt](http://ptak.felk.cvut.cz/public_datasets/SyntText/e2e-mlt.h5)
+  [e2e-mlt](http://ptak.felk.cvut.cz/public_datasets/SyntText/e2e-mlt.h5), [e2e-mlt-rctw](http://ptak.felk.cvut.cz/public_datasets/SyntText/e2e-mltrctw.h5)
 
 ```
 wget http://ptak.felk.cvut.cz/public_datasets/SyntText/e2e-mlt.h5
@@ -56,7 +58,7 @@ What we have found useful:
  - having somebody who can read non-latin scripts: we would like to thank Ali Anas for reviewing generated Arabic scene text.
 
 
-## Trainnig
+## Training
 
 ```
 python3 train.py -train_list=sample_train_data/MLT/trainMLT.txt -batch_size=8 -num_readers=5 -debug=0 -input_size=512 -ocr_batch_size=256 -ocr_feed_list=sample_train_data/MLT_CROPS/gt.txt
